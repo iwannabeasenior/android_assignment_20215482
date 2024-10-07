@@ -1,18 +1,14 @@
 package com.example.birthdaycardapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.caculator_constraintlayout_frag)
         setupToolbar()
-
     }
 
     override fun onStart() {
@@ -20,5 +16,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setupToolbar() {
         val toolBar = findViewById<Toolbar>(R.id.tool_bar)
+        toolBar.title = "LifeCycle"
+        toolBar.setTitleTextColor(this.getColor(R.color.white))
+//        toolBar.setLogo(R.drawable.record)
     }
 }
